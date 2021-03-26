@@ -1,9 +1,16 @@
-<select name="work_days" id="id_work_days" multiple>
-    <option value="1">sun</option>
-    <option value="2">mon</option>
-    <option value="3">tue</option>
-    <option value="4">wed</option>
-    <option value="5">thu</option>
-    <option value="6">fri</option>
-    <option value="7">sat</option>
-  </select>
+<div class="container">
+  <div class="row">
+    <div class="col-lg"   >
+      <button class="btn" (click)="enableDisableRule(0)"
+      [ngClass]="lastId == 0 ? 'red' : ''">Confusing</button>
+    </div>
+    <div class="col-lg">
+      <button class="btn" (click)="enableDisableRule(1)"
+      [ngClass]="lastId == 1 ? 'red' : ''">Easy-to-follow</button>
+    </div>
+    <div class="col-lg">
+      <button class="btn" (click)="enableDisableRule(2)"
+      [ngClass]="lastId == 2 ? 'red' : ''">Logical</button>
+    </div>
+  </div>
+</div>
