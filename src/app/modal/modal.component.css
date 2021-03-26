@@ -1,0 +1,23 @@
+.Assign-to-team {
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #273648;
+  }
+
+.test-button{
+    width: 300px;
+}
+.modal-content {
+    text-align: center;
+    justify-content: center;  
+    align-items: center;  
+    box-shadow: 0 1px 16px 0 #94a6b9;
+    border-radius: 16px;
+}

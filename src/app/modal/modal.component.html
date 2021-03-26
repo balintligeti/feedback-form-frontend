@@ -1,0 +1,27 @@
+<ng-template #content let-modal>
+    <h1 class="Assign-to-team">How would you rate this task in terms of structure?</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <button>button</button>
+                </div>
+                <div class="col-sm">
+                    <button>button</button>
+                </div>
+                <div class="col-sm">
+                    <button>button</button>
+                </div>
+            </div>
+        </div>
+    <div class="modal-footer">
+        <button-options>
+
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
+  
+
+  
+  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content)">Logout</button>
+  
+  
