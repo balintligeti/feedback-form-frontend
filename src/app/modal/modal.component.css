@@ -11,10 +11,8 @@
     color: #273648;
   }
 
-.test-button{
-    width: 300px;
-}
 .modal-content {
+    padding: 5%;
     text-align: center;
     justify-content: center;  
     align-items: center;  

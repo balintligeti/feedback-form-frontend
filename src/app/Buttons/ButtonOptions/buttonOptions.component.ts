@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./buttonOptions.component.css']
 })
 export class buttonOptions {
-  lastId: number;
+  lastId: number | null;
 
   enableDisableRule(id: number) {
-    this.lastId = (this.lastId == id) ? 5 : id 
+    this.lastId = (this.lastId == id) ? null : id 
 }
 }
