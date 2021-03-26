@@ -7,14 +7,11 @@
     font-style: normal;
     line-height: 1.67;
     letter-spacing: normal;
-    text-align: center;
     color: #273648;
   }
 
 .modal-content {
     padding: 5%;
-    text-align: center;
-    justify-content: center;  
     align-items: center;  
     box-shadow: 0 1px 16px 0 #94a6b9;
     border-radius: 16px;
