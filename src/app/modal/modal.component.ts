@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'ngbd-modal',
+  selector: 'first-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
   encapsulation: ViewEncapsulation.None,
