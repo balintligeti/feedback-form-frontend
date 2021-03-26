@@ -1,4 +1,4 @@
-.Assign-to-team {
+.main-text {
 
     font-family: 'Open Sans', sans-serif;
     font-size: 21px;
@@ -8,10 +8,12 @@
     line-height: 1.67;
     letter-spacing: normal;
     color: #273648;
+    text-align: center;
   }
 
 .modal-content {
-    padding: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     align-items: center;  
     box-shadow: 0 1px 16px 0 #94a6b9;
     border-radius: 16px;
