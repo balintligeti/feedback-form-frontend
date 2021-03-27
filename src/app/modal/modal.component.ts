@@ -13,7 +13,17 @@ export class ModalLarge {
   constructor(private modalService: NgbModal) {}
 
   openLg(content: any) {
-    this.modalService.open(content, { size: 'lg' });
+    this.modalService.open(content, {  windowClass : "myCustomModalClass" });
+  }
+
+  lastIdFirst: number | null;
+  firstButtonChoose(id: number) {
+    this.lastIdFirst = (this.lastIdFirst == id) ? null : id 
+  }
+
+  lastIdSecond: number | null;
+  secondButtonChoose(id: number) {
+    this.lastIdSecond = (this.lastIdSecond == id) ? null : id 
   }
 
 }

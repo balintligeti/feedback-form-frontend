@@ -1,10 +1,73 @@
 <ng-template #content let-modal>
-    <h1 class="main-text">How would you rate this task in terms of structure?</h1>
-    <button-options></button-options>
-    <textbox></textbox>
-  </ng-template>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <h1 class="main-text">How would you rate this task in terms of structure?</h1>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md-3 text-center">
+          <button class="btn" (click)="firstButtonChoose(0)"
+          [ngClass]="lastIdFirst == 0 ? 'selected-button' : ''">Confusing</button>
+        </div>
+        <div class="col-md-3 text-center">
+          <button class="btn" (click)="firstButtonChoose(1)"
+          [ngClass]="lastIdFirst == 1 ? 'selected-button' : ''">Easy-to-follow</button>
+        </div>
+        <div class="col-md-3 text-center">
+          <button class="btn" (click)="firstButtonChoose(2)"
+          [ngClass]="lastIdFirst == 2 ? 'selected-button' : ''">Logical</button>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-10">
+          <textbox [maxChars]='140'></textbox>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="">
+          <h1 class="main-text">How confident are you applying what you have learned?</h1>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-3 text-center">
+          <button class="btn" (click)="secondButtonChoose(0)"
+          [ngClass]="lastIdSecond == 0 ? 'selected-button' : ''">Not at all</button>
+        </div>
+        <div class="col-md-3  text-center">
+          <button class="btn" (click)="secondButtonChoose(1)"
+          [ngClass]="lastIdSecond == 1 ? 'selected-button' : ''">Not sure</button>
+        </div>
+        <div class="col-md-3  text-center">
+          <button class="btn" (click)="secondButtonChoose(2)"
+          [ngClass]="lastIdSecond == 2 ? 'selected-button' : ''">Probably okay</button>
+        </div>
+        <div class="col-md-3  text-center">
+          <button class="btn" (click)="secondButtonChoose(3)"
+          [ngClass]="lastIdSecond == 3 ? 'selected-button' : ''">Full confidence</button>
+        </div>
+      </div>
+      
+      <div class="row justify-content-md-center">
+        <div class="col-md-10">
+          <textbox [maxChars]='140'></textbox>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-2 text-center"   >
+          <button class="confirm-button" (click)="modal.close('Ok click')" (click)="openLg(modal2)">Confirm</button>
+        </div>
+        <div class="col-md-2 text-center">
+          <button class="dismiss-button" (click)="modal.close('Ok click')">Dismiss</button>
+        </div>
+      </div>
+  </div>
+</ng-template>
 
-  
-  <button  (click)="openLg(content)">Logout</button>
-  
-  
+
+<button  (click)="openLg(content)">Logout</button>
+
+
+<ng-template #modal2 let-modal>
+  <p>mukodik!</p>
+</ng-template>
