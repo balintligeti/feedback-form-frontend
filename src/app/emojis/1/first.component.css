@@ -71,7 +71,22 @@
     height: 6px;
     width: 20px;
     padding-top: 16px;
-    margin-left: 3.5px;
+    margin-left: 3.23px;
     border-bottom: 6px solid white;
     border-radius: 35%;
+}
+
+.button-clicked{
+    width: 56px;
+    height: 56px;
+    background-color:white;
+    border-color: #3b4249;
+    border-width: 2px;
+    border-radius: 50%;
+}
+
+.button-not-clicked {
+    background-color:white;
+    border-radius: 50%;
+    border: none
 }
