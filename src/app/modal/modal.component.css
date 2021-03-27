@@ -18,3 +18,64 @@
     box-shadow: 0 1px 16px 0 #94a6b9;
     border-radius: 16px;
 }
+
+.btn {
+  width: 132px;
+  height: 32px;
+  margin-bottom: 1vw;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #94a6b9;
+  border-radius: 21px;
+  border: solid 1.5px #94a6b9;
+}
+
+
+.selected-button {
+  background-color: #8b7aff;
+  color: white
+}
+
+
+.myCustomModalClass .modal-dialog {
+  max-width: 720px;
+}
+
+.confirm-button {
+  width: 88px;
+  height: 32px;
+  margin-bottom: 1vw;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  background-color: #77a2ff;
+  border-radius: 21px;
+  border-width: 0;
+  color: white;
+}
+
+.dismiss-button {
+  width: 88px;
+  height: 32px;
+  margin-bottom: 1vw;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  border-radius: 21px;
+  border: solid 1.5px #94a6b9;
+  color: #94a6b9;
+  background-color: white;
+}

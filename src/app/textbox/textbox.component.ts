@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'textbox',
@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./textbox.component.css'],
   })
   export class Textbox {
-    maxChars = 140;
+    @Input()
+    maxChars: number;
+
     role = '';
     chars = 0;
   
