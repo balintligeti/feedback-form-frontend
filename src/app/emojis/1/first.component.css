@@ -79,9 +79,8 @@
 .button-clicked{
     width: 56px;
     height: 56px;
-    background-color:white;
+    background-color:#4b525a;
     border-color: #3b4249;
-    border-width: 2px;
     border-radius: 50%;
 }
 
