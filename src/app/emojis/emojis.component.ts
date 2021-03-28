@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'emojis',
-    templateUrl: './first.component.html',
-    styleUrls: ['./first.component.css'],
+    templateUrl: './emojis.component.html',
+    styleUrls: ['./emojis.component.css'],
   })
   export class FirstEmoji {
     lastId: number | null;

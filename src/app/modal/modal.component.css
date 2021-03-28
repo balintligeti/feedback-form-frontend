@@ -94,3 +94,8 @@
 
 
 .botton-buffer { margin-bottom: 27px; }
+
+.logout-button {
+  margin-top: 20%;
+  text-align: center;
+}

@@ -4,7 +4,7 @@ import { ApiService } from '../service/api.service';
 import { UserFeedback } from '../model/userFeedback';
 
 @Component({
-  selector: 'first-modal',
+  selector: 'modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
   encapsulation: ViewEncapsulation.None,
