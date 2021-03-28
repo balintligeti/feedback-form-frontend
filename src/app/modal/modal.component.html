@@ -53,7 +53,7 @@
           <textbox [maxChars]='140'></textbox>
         </div>
       </div>
-      <div class="row justify-content-md-center">
+      <div class="row justify-content-md-center ">
         <div class="col-md-2 text-center"   >
           <button class="confirm-button" (click)="modal.close('Ok click')" (click)="openLg(modal2)">Confirm</button>
         </div>
@@ -65,9 +65,33 @@
 </ng-template>
 
 
-<button  (click)="openLg(content)">Logout</button>
+<button  (click)="openLg(content)">Log out</button>
+
+
 
 
 <ng-template #modal2 let-modal>
-  <p>mukodik!</p>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <h1 class="main-text">How would you rate your experience using Avatao?</h1>
+      </div>
+    </div>
+    <emojis></emojis>
+    
+      
+      <div class="row justify-content-md-center">
+        <div class="col-md-10">
+          <textbox [maxChars]='140'></textbox>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-2 text-center"   >
+          <button class="confirm-button" (click)="modal.close('Ok click')" (click)="openLg(modal2)" style="background-color: #eb5751;">Log out</button>
+        </div>
+        <div class="col-md-2 text-center">
+          <button class="dismiss-button" (click)="modal.close('Ok click')">Dismiss</button>
+        </div>
+      </div>
+  </div>
 </ng-template>
