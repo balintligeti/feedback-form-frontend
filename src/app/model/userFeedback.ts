@@ -3,16 +3,20 @@ import { v4 as uuid } from 'uuid';
 
 export class UserFeedback {
     challenge_id = uuid();
+    
     data: {
         user_effort: {
-            feedback: string;
+            feedback: string,
             score: number
         },
         educational_value: {
-            feedback: string;
+            feedback: string,
             score: number
         },
-        url: string;
+        url: string,
         is_support: boolean
+    }
+    constructor() {
+
     }
   }

@@ -36,9 +36,11 @@
 }
 
 
+
 .selected-button {
   background-color: #8b7aff;
-  color: white
+  color: white;
+  outline: none;
 }
 
 
@@ -80,3 +82,5 @@
   background-color: white;
 }
 
+
+.botton-buffer { margin-bottom: 27px; }
