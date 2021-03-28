@@ -5,7 +5,7 @@
         <h1 class="main-text">How would you rate this task in terms of structure?</h1>
       </div>
     </div>
-    <div class="row justify-content-md-center botton-buffer">
+    <div class="row justify-content-sm-center botton-buffer">
         <div class="col-md-3 text-center">
           <button class="btn"(click)="firstButtonChoose(0)"
           [ngClass]="lastIdFirst == 0 ? 'selected-button' : ''">Confusing</button>
@@ -30,19 +30,19 @@
         </div>
       </div>
       <div class="row justify-content-md-center botton-buffer">
-        <div class="col-md-3 text-center">
+        <div class="col-md-3 text-center btnSm">
           <button class="btn" (click)="secondButtonChoose(0)"
           [ngClass]="lastIdSecond == 0 ? 'selected-button' : ''">Not at all</button>
         </div>
-        <div class="col-md-3  text-center">
+        <div class="col-md-3  text-center btnSm">
           <button class="btn" (click)="secondButtonChoose(1)"
           [ngClass]="lastIdSecond == 1 ? 'selected-button' : ''">Not sure</button>
         </div>
-        <div class="col-md-3  text-center">
+        <div class="col-md-3  text-center btnSm">
           <button class="btn" (click)="secondButtonChoose(2)"
           [ngClass]="lastIdSecond == 2 ? 'selected-button' : ''">Probably okay</button>
         </div>
-        <div class="col-md-3  text-center">
+        <div class="col-md-3  text-center btnSm">
           <button class="btn" (click)="secondButtonChoose(3)"
           [ngClass]="lastIdSecond == 3 ? 'selected-button' : ''">Full confidence</button>
         </div>
@@ -63,6 +63,7 @@
       </div>
   </div>
   
+  <button (click) ="addFeedback()">be</button>
 
 </ng-template>
 
@@ -83,7 +84,7 @@
     
       
       <div class="row justify-content-md-center botton-buffer">
-        <div class="col-md-10">
+        <div class="col-md-10 text-center">
           <textbox [maxChars]='140'></textbox>
         </div>
       </div>
