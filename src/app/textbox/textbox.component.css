@@ -1,7 +1,6 @@
 .right{
     float:right !important; 
     margin-bottom: 5.7px;
-    margin-right: 0.2vw;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -15,7 +14,6 @@
 }
 
 .left{
-    margin-left: 0.4vw;
 
     float:left !important;
     margin-bottom: 5.7px;
@@ -30,7 +28,8 @@
 }
 
 .textbox {
-    width: 100%;
+    margin-left: 2%;
+    width: 97%;
 }
 textarea {
     width: 100% !important;

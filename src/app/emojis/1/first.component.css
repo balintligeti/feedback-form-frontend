@@ -90,7 +90,23 @@
     border: none
 }
 
-.smileys {
-    margin-top: 20px;
-    height: 80px;
+
+
+
+@media  (max-width: 755px) {
+    .smileys {
+        height: 250px;
+        margin-bottom: 30px
+    }
+    }
+    @media  (min-width: 765px) {
+        .smileys {
+            margin-top: 20px;
+            height: 80px;
+        }
+        }
+
+.text-center {
+    margin-left: 20px;
+    margin-right: 20px;
 }

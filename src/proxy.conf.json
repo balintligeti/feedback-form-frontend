@@ -1,0 +1,11 @@
+
+{
+    "/api": {
+      "target": "http://0.0.0.0:5000/feedbacks",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
