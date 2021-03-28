@@ -7,6 +7,9 @@ import { ModalLarge } from './modal/modal.component';
 import { Textbox } from './textbox/textbox.component';
 import { FormsModule } from '@angular/forms';
 import { FirstEmoji } from './emojis/1/first.component';
+import {HttpClientModule} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http'
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,8 @@ import { FirstEmoji } from './emojis/1/first.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
-    
+    FormsModule,
+    HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent],

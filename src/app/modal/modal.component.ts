@@ -1,5 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HttpModule } from '@angular/http';
+import { ApiService } from '../service/api.service';
+import { UserFeedback } from '../model/userFeedback';
 
 @Component({
   selector: 'first-modal',
@@ -10,7 +13,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class ModalLarge {
   closeResult: string;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal,private apiService:ApiService) {}
 
   openLg(content: any) {
     this.modalService.open(content, {  windowClass : "myCustomModalClass" });
@@ -24,6 +27,15 @@ export class ModalLarge {
   lastIdSecond: number | null;
   secondButtonChoose(id: number) {
     this.lastIdSecond = (this.lastIdSecond == id) ? null : id 
+  }
+
+  feedback = new UserFeedback;
+
+  addFeedback() {
+    this.apiService.addFeedback(this.feedback)
+      .subscribe(data => {
+        console.log(data)
+      })      
   }
 
 }
