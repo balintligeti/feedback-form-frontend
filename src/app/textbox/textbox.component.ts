@@ -6,10 +6,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
     styleUrls: ['./textbox.component.css'],
   })
   export class Textbox {
-    @Output() user_effort_feedback = new EventEmitter<any>();
+    @Output() user_string_feedback = new EventEmitter<any>();
 
     updateParent(): void{
-      this.user_effort_feedback.emit(this.role)
+      if (this.role != '') {
+        this.user_string_feedback.emit(this.role)
+      }
     }
     
     @Input()

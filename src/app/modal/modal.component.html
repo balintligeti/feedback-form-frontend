@@ -25,7 +25,7 @@
       </div>
       <div class="row justify-content-md-center botton-buffer">
         <div class="col-md-10">
-          <textbox [maxChars]='140' (user_effort_feedback)="userEffort($event)"></textbox>
+          <textbox [maxChars]='140' (user_string_feedback)="userEffort($event)"></textbox>
         </div>
       </div>
       <div class="row justify-content-md-center botton-buffer">
@@ -54,21 +54,19 @@
       
       <div class="row justify-content-md-center botton-buffer">
         <div class="col-md-10">
-          <textbox [maxChars]='140' (user_effort_feedback)="userEffort($event)"></textbox>
+          <textbox [maxChars]='140' (user_string_feedback)="educationalValue($event)"></textbox>
         </div>
       </div>
       <div class="row justify-content-md-center">
         <div class="col-md-2 text-center"   >
-          <button class="confirm-button" (click)="modal.close('Ok click')" (click)="openLg(modal2)">Confirm</button>
+          <button class="confirm-button" (click) ="addFeedback()" (click)="modal.close('Ok click')" (click)="openLg(modal2)">Confirm</button>
         </div>
         <div class="col-md-2 text-center">
-          <button class="dismiss-button" (click)="modal.close('Ok click')">Dismiss</button>
+          <button class="dismiss-button"  (click)="modal.close('Ok click')">Dismiss</button>
         </div>
       </div>
   </div>
   
-  <button (click) ="addFeedback()">request</button>
-
 </ng-template>
 
 

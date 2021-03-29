@@ -10,10 +10,10 @@ import { UserFeedback } from '../model/userFeedback';
   encapsulation: ViewEncapsulation.None,
 })
 export class ModalLarge {
-  user_effort_score: number;
-  educational_value_score: number;
-  user_effort_feedback: string;
-  educational_value_feedback: string;
+  user_effort_score = -1;
+  educational_value_score = -1;
+  user_effort_feedback = "User didn't answered.";
+  educational_value_feedback = "User didn't answered.";
 
   userEffort(text: string) {
     this.user_effort_feedback = text
@@ -38,17 +38,25 @@ export class ModalLarge {
   }
 
 
+
   addFeedback() {
     let feedback = new UserFeedback()
-    feedback.data.user_effort.score = this.user_effort_score
-    feedback.data.educational_value.score = this.educational_value_score
-    feedback.data.user_effort.feedback = this.user_effort_feedback
-    feedback.data.educational_value.feedback = this.educational_value_feedback
+    if (this.user_effort_score != -1 || this.educational_value_score != -1 || this.user_effort_feedback != "User didn't answered." || this.educational_value_feedback != "User didn't answered.") {
+      feedback.data.user_effort.score = this.user_effort_score
+      feedback.data.educational_value.score = this.educational_value_score
+      feedback.data.user_effort.feedback = this.user_effort_feedback
+      feedback.data.educational_value.feedback = this.educational_value_feedback
+      this.apiService.addFeedback(feedback)
+        .subscribe() 
+    }
+    this.resetVariables()
+  }
 
-    this.apiService.addFeedback(feedback)
-      .subscribe(data => {
-        console.log(data)
-      })      
+  resetVariables() {
+    this.user_effort_score = -1;
+    this.educational_value_score = -1;
+    this.user_effort_feedback = "User didn't answered.";
+    this.educational_value_feedback = "User didn't answered.";
   }
 
 }

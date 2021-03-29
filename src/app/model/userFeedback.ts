@@ -26,7 +26,7 @@ export class UserFeedback {
                 feedback : "User didn't answered.",
                 score : -1
             },
-            url: "http://localhost:4200/",
+            url: window.location.href,
             is_support : true
         }
 
