@@ -12,20 +12,20 @@
     <div class="row justify-content-sm-center botton-buffer">
         <div class="col-md-3 text-center">
           <button class="btn"(click)="firstButtonChoose(0)"
-          [ngClass]="lastIdFirst == 0 ? 'selected-button' : ''">Confusing</button>
+          [ngClass]="user_effort_score == 0 ? 'selected-button' : ''">Confusing</button>
         </div>
         <div class="col-md-3 text-center">
           <button class="btn" (click)="firstButtonChoose(1)"
-          [ngClass]="lastIdFirst == 1 ? 'selected-button' : ''">Easy-to-follow</button>
+          [ngClass]="user_effort_score == 1 ? 'selected-button' : ''">Easy-to-follow</button>
         </div>
         <div class="col-md-3 text-center">
           <button class="btn" (click)="firstButtonChoose(2)"
-          [ngClass]="lastIdFirst == 2 ? 'selected-button' : ''">Logical</button>
+          [ngClass]="user_effort_score == 2 ? 'selected-button' : ''">Logical</button>
         </div>
       </div>
       <div class="row justify-content-md-center botton-buffer">
         <div class="col-md-10">
-          <textbox [maxChars]='140'></textbox>
+          <textbox [maxChars]='140' (user_effort_feedback)="userEffort($event)"></textbox>
         </div>
       </div>
       <div class="row justify-content-md-center botton-buffer">
@@ -36,25 +36,25 @@
       <div class="row justify-content-md-center botton-buffer">
         <div class="col-md-3 text-center btnSm">
           <button class="btn" (click)="secondButtonChoose(0)"
-          [ngClass]="lastIdSecond == 0 ? 'selected-button' : ''">Not at all</button>
+          [ngClass]="educational_value_score == 0 ? 'selected-button' : ''">Not at all</button>
         </div>
         <div class="col-md-3  text-center btnSm">
           <button class="btn" (click)="secondButtonChoose(1)"
-          [ngClass]="lastIdSecond == 1 ? 'selected-button' : ''">Not sure</button>
+          [ngClass]="educational_value_score == 1 ? 'selected-button' : ''">Not sure</button>
         </div>
         <div class="col-md-3  text-center btnSm">
           <button class="btn" (click)="secondButtonChoose(2)"
-          [ngClass]="lastIdSecond == 2 ? 'selected-button' : ''">Probably okay</button>
+          [ngClass]="educational_value_score == 2 ? 'selected-button' : ''">Probably okay</button>
         </div>
         <div class="col-md-3  text-center btnSm">
           <button class="btn" (click)="secondButtonChoose(3)"
-          [ngClass]="lastIdSecond == 3 ? 'selected-button' : ''">Full confidence</button>
+          [ngClass]="educational_value_score == 3 ? 'selected-button' : ''">Full confidence</button>
         </div>
       </div>
       
       <div class="row justify-content-md-center botton-buffer">
         <div class="col-md-10">
-          <textbox [maxChars]='140'></textbox>
+          <textbox [maxChars]='140' (user_effort_feedback)="userEffort($event)"></textbox>
         </div>
       </div>
       <div class="row justify-content-md-center">
@@ -67,7 +67,7 @@
       </div>
   </div>
   
-  <button (click) ="addFeedback()">be</button>
+  <button (click) ="addFeedback()">request</button>
 
 </ng-template>
 

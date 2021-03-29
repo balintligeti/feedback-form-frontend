@@ -1,6 +1,7 @@
 <div class="textbox">
     <p class="left">We'd love to hear your thoughts</p><p class="right">{{role.length}}/{{maxChars}} characters</p>
     <textarea 
+    (input)="updateParent()"
     [(ngModel)]="role"
     [maxlength]="maxChars">
     </textarea>
