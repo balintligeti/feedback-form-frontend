@@ -8,6 +8,7 @@ import { Textbox } from './textbox/textbox.component';
 import { FormsModule } from '@angular/forms';
 import { Emojis } from './emojis/emojis.component';
 import {HttpClientModule} from '@angular/common/http'
+import { Login } from './login/login.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http'
     AppComponent,
     Modal,
     Textbox,
-    Emojis
+    Emojis,
+    Login
   ],
   imports: [
     BrowserModule,
