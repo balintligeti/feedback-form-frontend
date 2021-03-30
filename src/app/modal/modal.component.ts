@@ -25,15 +25,15 @@ export class ModalLarge {
 
   constructor(private modalService: NgbModal, private apiService:ApiService) {}
 
-  openLg(content: any) {
-    this.modalService.open(content, {  windowClass : "myCustomModalClass" });
+  openModal(content: any) {
+    this.modalService.open(content, {  windowClass : "modalWidth" });
   }
 
-  firstButtonChoose(id: number) {
+  user_effort_score_button(id: number) {
     this.user_effort_score = (this.user_effort_score == id) ? -1 : id;
   }
 
-  secondButtonChoose(id: number) {
+  educational_value_score_button(id: number) {
     this.educational_value_score = (this.educational_value_score == id) ? -1 : id;
   }
 

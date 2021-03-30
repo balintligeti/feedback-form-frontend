@@ -1,5 +1,5 @@
 <div class="logout-button">
-  <button  (click)="openLg(content)" class="btn" style="color: black; border-color: black;">Log out</button>
+  <button  (click)="openModal(content)" class="btn" style="color: black; border-color: black;">Log out</button>
 
 </div>
 <ng-template #content let-modal>
@@ -11,15 +11,15 @@
     </div>
     <div class="row justify-content-sm-center botton-buffer">
         <div class="col-md-3 text-center">
-          <button class="btn"(click)="firstButtonChoose(0)"
+          <button class="btn"(click)="user_effort_score_button(0)"
           [ngClass]="user_effort_score == 0 ? 'selected-button' : ''">Confusing</button>
         </div>
         <div class="col-md-3 text-center">
-          <button class="btn" (click)="firstButtonChoose(1)"
+          <button class="btn" (click)="user_effort_score_button(1)"
           [ngClass]="user_effort_score == 1 ? 'selected-button' : ''">Easy-to-follow</button>
         </div>
         <div class="col-md-3 text-center">
-          <button class="btn" (click)="firstButtonChoose(2)"
+          <button class="btn" (click)="user_effort_score_button(2)"
           [ngClass]="user_effort_score == 2 ? 'selected-button' : ''">Logical</button>
         </div>
       </div>
@@ -35,19 +35,19 @@
       </div>
       <div class="row justify-content-md-center botton-buffer">
         <div class="col-md-3 text-center btnSm">
-          <button class="btn" (click)="secondButtonChoose(0)"
+          <button class="btn" (click)="educational_value_score_button(0)"
           [ngClass]="educational_value_score == 0 ? 'selected-button' : ''">Not at all</button>
         </div>
         <div class="col-md-3  text-center btnSm">
-          <button class="btn" (click)="secondButtonChoose(1)"
+          <button class="btn" (click)="educational_value_score_button(1)"
           [ngClass]="educational_value_score == 1 ? 'selected-button' : ''">Not sure</button>
         </div>
         <div class="col-md-3  text-center btnSm">
-          <button class="btn" (click)="secondButtonChoose(2)"
+          <button class="btn" (click)="educational_value_score_button(2)"
           [ngClass]="educational_value_score == 2 ? 'selected-button' : ''">Probably okay</button>
         </div>
         <div class="col-md-3  text-center btnSm">
-          <button class="btn" (click)="secondButtonChoose(3)"
+          <button class="btn" (click)="educational_value_score_button(3)"
           [ngClass]="educational_value_score == 3 ? 'selected-button' : ''">Full confidence</button>
         </div>
       </div>
@@ -59,7 +59,7 @@
       </div>
       <div class="row justify-content-md-center">
         <div class="col-md-2 text-center"   >
-          <button class="confirm-button" (click) ="addFeedback()" (click)="modal.close('Ok click')" (click)="openLg(modal2)">Confirm</button>
+          <button class="confirm-button" (click) ="addFeedback()" (click)="modal.close('Ok click')" (click)="openModal(modal2)">Confirm</button>
         </div>
         <div class="col-md-2 text-center">
           <button class="dismiss-button"  (click)="modal.close('Ok click')">Dismiss</button>
@@ -86,13 +86,13 @@
     
       
       <div class="row justify-content-md-center botton-buffer">
-        <div class="col-md-9 text-center">
+        <div class="col-md-10 text-center">
           <textbox [maxChars]='140'></textbox>
         </div>
       </div>
       <div class="row justify-content-md-center">
         <div class="col-md-2 text-center"   >
-          <button class="confirm-button" (click)="modal.close('Ok click')" (click)="openLg(modal2)" style="background-color: #eb5751;">Log out</button>
+          <button class="confirm-button" (click)="modal.close('Ok click')" style="background-color: #eb5751;">Log out</button>
         </div>
         <div class="col-md-2 text-center">
           <button class="dismiss-button" (click)="modal.close('Ok click')">Dismiss</button>

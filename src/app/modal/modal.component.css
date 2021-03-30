@@ -46,7 +46,7 @@
 }
 
 
-.myCustomModalClass .modal-dialog {
+.modalWidth .modal-dialog {
   max-width: 720px;
 }
 
