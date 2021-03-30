@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ApiService } from '../service/api.service';
 import { UserFeedback } from '../model/userFeedback';
+import { AppCookieService } from '../service/appCookie.service';
 
 @Component({
   selector: 'modal',
@@ -23,10 +24,15 @@ export class Modal {
     this.educational_value_feedback = text
   }
 
-  constructor(private modalService: NgbModal, private apiService:ApiService) {}
+  constructor(private modalService: NgbModal, private apiService:ApiService, private appCookie: AppCookieService) {}
 
-  openModal(content: any) {
+  openModal(content: any, user: string) {
     this.modalService.open(content, {  windowClass : "modalWidth" });
+    if (user == 'user1'){
+      this.appCookie.set("user", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMSJ9.VzqrIt7rU5JEQzVsgk-hxGr56VphfQF9h5KnpOhyYvk"); //user1
+    } else{
+      this.appCookie.set("user", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMiJ9.dvVCAT2exyaUMeJSFZh7ck0xrUcNqmrhjcje23tPiGE"); //user2
+    }
   }
 
   user_effort_score_button(id: number) {

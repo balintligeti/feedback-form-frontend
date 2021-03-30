@@ -1,6 +1,6 @@
 <div class="logout-button">
-  <button  (click)="openModal(content)" class="btn" style="color: black; border-color: black;">Log out</button>
-
+  <button  (click)="openModal(content,'user1')" class="btn" style="color: black; border-color: black;">User1 Log out</button>
+  <button  (click)="openModal(content,'user2')" class="btn" style="color: black; border-color: black;">User2 Log out</button>
 </div>
 <ng-template #content let-modal>
   <div class="container">
@@ -59,7 +59,7 @@
       </div>
       <div class="row justify-content-md-center">
         <div class="col-md-2 text-center"   >
-          <button class="confirm-button" (click) ="addFeedback()" (click)="modal.close('Ok click')" (click)="openModal(modal2)">Confirm</button>
+          <button class="confirm-button" (click) ="addFeedback()" (click)="modal.close('Ok click')" (click)="openModal(modal2, '')">Confirm</button>
         </div>
         <div class="col-md-2 text-center">
           <button class="dismiss-button"  (click)="modal.close('Ok click')">Dismiss</button>
