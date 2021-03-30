@@ -107,6 +107,23 @@
         }
 
 .text-center {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+.eye-smile{
+    margin-top: 23px;
+    height: 10px;
+    width: 12px;
+    margin-left: 14.5px;
+    border-top: 5px solid #3b4249;
+    border-radius: 50%;
+}
+.eye1-smile{
+    margin-top: 23px;
+    height: 10px;
+    width: 12px;
+    margin-right: 14px;
+    border-top: 5px solid #3b4249;
+    border-radius: 50%;
 }

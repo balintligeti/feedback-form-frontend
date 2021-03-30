@@ -37,8 +37,6 @@ export class ModalLarge {
     this.educational_value_score = (this.educational_value_score == id) ? -1 : id;
   }
 
-
-
   addFeedback() {
     let feedback = new UserFeedback()
     if (this.user_effort_score != -1 || this.educational_value_score != -1 || this.user_effort_feedback != "User didn't answered." || this.educational_value_feedback != "User didn't answered.") {
@@ -58,5 +56,4 @@ export class ModalLarge {
     this.user_effort_feedback = "User didn't answered.";
     this.educational_value_feedback = "User didn't answered.";
   }
-
 }
