@@ -26,7 +26,7 @@ export class AppCookieService {
     }
  
     remove(key: string) {
-      document.cookie = `${key} = ; expires=Thu, 1 jan 1990 12:00:00 UTC; path=/`;
+      document.cookie = `${key} = ; expires=Thu, 1 jan 2022 12:00:00 UTC; path=/`;
     }
  
     set(key: string, value: string) {

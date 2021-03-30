@@ -8,7 +8,6 @@ import { AppCookieService } from '../service/appCookie.service';
 })
 export class Login {
   constructor( private appCookie: AppCookieService) {
-      appCookie.remove('user');
   }
   login(user: string) {
     if (user == 'user1'){
@@ -17,5 +16,4 @@ export class Login {
       this.appCookie.set("user", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMiJ9.dvVCAT2exyaUMeJSFZh7ck0xrUcNqmrhjcje23tPiGE"); //user2
     }
   }
-  
 }
