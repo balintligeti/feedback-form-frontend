@@ -26,13 +26,8 @@ export class Modal {
 
   constructor(private modalService: NgbModal, private apiService:ApiService, private appCookie: AppCookieService) {}
 
-  openModal(content: any, user: string) {
+  openModal(content: any) {
     this.modalService.open(content, {  windowClass : "modalWidth" });
-    if (user == 'user1'){
-      this.appCookie.set("user", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMSJ9.VzqrIt7rU5JEQzVsgk-hxGr56VphfQF9h5KnpOhyYvk"); //user1
-    } else{
-      this.appCookie.set("user", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMiJ9.dvVCAT2exyaUMeJSFZh7ck0xrUcNqmrhjcje23tPiGE"); //user2
-    }
   }
 
   user_effort_score_button(id: number) {
@@ -61,5 +56,9 @@ export class Modal {
     this.educational_value_score = -1;
     this.user_effort_feedback = "User didn't answered.";
     this.educational_value_feedback = "User didn't answered.";
+  }
+
+  logout() {
+    this.appCookie.remove("user")
   }
 }
