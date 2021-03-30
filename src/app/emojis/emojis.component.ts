@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     templateUrl: './emojis.component.html',
     styleUrls: ['./emojis.component.css'],
   })
-  export class FirstEmoji {
+  export class Emojis {
     lastId: number | null;
     emojiChoose(id: number) {
       this.lastId = (this.lastId == id) ? null : id 

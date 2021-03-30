@@ -9,7 +9,7 @@ import { UserFeedback } from '../model/userFeedback';
   styleUrls: ['./modal.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ModalLarge {
+export class Modal {
   user_effort_score = -1;
   educational_value_score = -1;
   user_effort_feedback = "User didn't answered.";

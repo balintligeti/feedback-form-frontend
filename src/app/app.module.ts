@@ -3,20 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ModalLarge } from './modal/modal.component';
+import { Modal } from './modal/modal.component';
 import { Textbox } from './textbox/textbox.component';
 import { FormsModule } from '@angular/forms';
-import { FirstEmoji } from './emojis/emojis.component';
+import { Emojis } from './emojis/emojis.component';
 import {HttpClientModule} from '@angular/common/http'
-import {HttpClient} from '@angular/common/http'
-import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalLarge,
+    Modal,
     Textbox,
-    FirstEmoji
+    Emojis
   ],
   imports: [
     BrowserModule,
